@@ -7,18 +7,19 @@
 <body>
 <div id="top"></div>
 <div id="visuals">
-    <h1 class="title" id="sitename"><a href="index.php">Visual SQL</a></h1>
-    <img id="logo" alt="" src="">
+    <h1 class="title" id="sitename"><a id="linktext" href="index.php">VisualSQL</a></h1>
 </div>
 <div id="credentials">
-    <form action="">
+    <form action="phpCode/verifyUser.php" method="post">
         <label for="loginid">LOGIN</label><br>
-        <input type="text" id="loginid" name="loginid" required><br><br>
+        <input type="text" id="loginid" name="loginid" placeholder="Enter Login ID"><br><br>
         <label for="password">PASSWORD</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Submit">
+        <input type="password" id="password" name="password" placeholder="Enter Password"><br><br>
+        <input type="submit" name="submit" value="Submit">
     </form>
 </div>
 </body>
 </html>
 <?php
+
+?>
