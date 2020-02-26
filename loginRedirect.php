@@ -7,10 +7,12 @@ $formID = $_REQUEST['loginid'];
 $formPassword = $_REQUEST['password'];
 
 $result = $credentials->getCredentials($formID,$formPassword);
-if($result === true){
+if($result != 0){
     session_start();
-    $_SESSION["active"] = 'placeholder';
-    header('Location: index.php');
+    $_SESSION["active"] = $result;
+    header('Location: index.php?' . http_build_query(array(
+            'id' => $formID,
+            'pss' => $formPassword)));
     exit();
 } else {
     header('Location: login.php');

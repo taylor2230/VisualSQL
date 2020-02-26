@@ -6,10 +6,10 @@
 </head>
 <body>
 <div id="top"></div>
-<div id="visuals">
-    <h1 class="title" id="sitename"><a id="linktext" href="login.php">VisualSQL</a></h1>
-</div>
-<div id="credentials">
+<section id="visuals">
+    <h1 class="title" id="sitename"><a id="homelink" href="login.php">VisualSQL</a></h1>
+</section>
+<section id="credentials">
     <form action="loginRedirect.php" method="post">
         <label for="loginid">LOGIN</label><br>
         <input type="text" id="loginid" name="loginid" placeholder="Enter Login ID"><br><br>
@@ -17,8 +17,11 @@
         <input type="password" id="password" name="password" placeholder="Enter Password"><br><br>
         <input type="submit" name="submit" value="Submit">
     </form>
-</div>
+</section>
 </body>
+<footer>
+
+</footer>
 </html>
 <?php
 
