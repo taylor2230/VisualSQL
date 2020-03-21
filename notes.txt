@@ -1,0 +1,32 @@
+index:
+    create tables for recent documents
+        loop through database to provide recent documents
+    create views for canned queries
+        functions to execute in reports tab
+            must transfer to reports tab and include information to signify canned queries
+#documents:
+    saved "documents"
+        database should contain documents in tables with text file of query requirements?
+    create table in database to handle saved documents and location
+        depending on time
+#report:
+    create vsql system
+        most important part of entire thing
+    requires unique db login page -> leads into VSQL on success; returns error
+    embed application in iframe to allow different db login
+#admin:
+    page that can view databases
+    update rows
+    insert records
+    delete records
+#account:
+    allow user access for change password for login only -> means access through DB to update a record
+
+
+### Next Steps:
+    Determine database schema
+    Create VSQL page from database schema
+    VSQL page should load into another page after credentials
+
+
+

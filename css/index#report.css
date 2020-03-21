@@ -1,0 +1,67 @@
+html{
+    background: #ffffff;
+    overflow: auto;
+    color: #303031;
+}
+body{
+    font-family: 'Roboto', serif;
+}
+#top{
+    display: flex;
+    position: relative;
+    left: -7.8px;
+    top: -8px;
+    width: 101.75%;
+    height: 40px;
+    border-top: 4px solid #ff4040;
+    border-bottom: 1px solid rgba(0.0,0.0,0.0,0.1);
+}
+.toplinks{
+    display: inline-block;
+    position: relative;
+    height: 26px;
+    top: 6px;
+    left: 5px;
+}
+#homelink{
+    text-decoration: none;
+    position: relative;
+    color: rgba(0.0,0.0,0.0,0.7);
+    font-size: 22px;
+    border-right: 1px solid rgba(0.0,0.0,0.0,0.1);
+}
+#homelink:hover{
+    border-right: 1px solid #ff4040;
+}
+.toplinks-sub{
+    position: absolute;
+    left: 140px;
+    top: 13px;
+}
+.toplinks-sub > a{
+    text-decoration: none;
+    font-size: 14px;
+    color: rgba(0.0,0.0,0.0,0.6);
+    position:relative;
+}
+#opt1{
+    display: inline;
+    position: relative;
+    left: 0px;
+}
+#opt2{
+    position: relative;
+    left: 22px;
+}
+#opt3{
+    position: relative;
+    left: 44px;
+}
+#opt4{
+    position: relative;
+    left: 66px;
+}
+#opt5{
+    position: relative;
+    left: 88px;
+}

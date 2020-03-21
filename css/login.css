@@ -1,0 +1,94 @@
+html{
+    background: #ffffff;
+    overflow: auto;
+    color: #303031;
+}
+body{
+    font-family: 'Roboto', serif;
+}
+#top{
+    color: transparent;
+    background-color: #ff4040;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    Width: 101.75%;
+    height: 5px;
+    left: -7.8px;
+    top: -9px;
+}
+.title{
+    display: flex;
+    position: relative;
+    letter-spacing: 3px;
+    justify-content: center;
+}
+.title a#homelink{
+    text-decoration: none;
+    color: #303031;
+    font-weight: 300;
+    font-size: 34px;
+    display: inline-block;
+    position: relative;
+    border-bottom: 2px solid rgba(0.0,0.0,0.0,0.2);
+}
+.title a:visited{
+    text-decoration: none;
+    color: #303031;
+}
+a#homelink:hover{
+    border-bottom:2px solid #ff4040;
+}
+#credentials{
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+#loginlabel{
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: lighter;
+    position: relative;
+    left: 2px;
+    top: -15px;
+}
+#passwordlabel{
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: lighter;
+    position: relative;
+    left: 2px;
+    top: -50px;
+}
+
+#loginid, #password{
+    font-size: 10px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    top: -15px;
+}
+#password{
+    top: -50px;
+}
+#submit{
+    cursor: pointer;
+    background: #ff4040;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 1px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    top: -85px;
+    border: 2px solid #ff4040;
+}
+#submit:active{
+    background: #303031;
+    border: 2px solid #303031;
+    color: #ffffff;
+}
