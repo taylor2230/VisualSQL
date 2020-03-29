@@ -5,7 +5,8 @@ $credentials = new verifyUser();
 $formID = $_REQUEST['loginid'];
 $formPassword = $_REQUEST['password'];
 
-$result = $credentials->getCredentials($formID,$formPassword);
+$result = $credentials->getCredentials($formID, $formPassword, 'user_info',
+    'verifyaccess','33GUk2R3cfvaXaly','user_access', 'user_id');
 if($result != 0){
     session_start();
     $_SESSION["active"] = $result;
@@ -14,7 +15,8 @@ if($result != 0){
             'pss' => $formPassword)));
     exit();
 } else {
-    header('Location: ./login.php');
+    header('Location: ./login.php?' . http_build_query(array(
+        'failed'=>'true')));
     exit();
 }
 

@@ -8,7 +8,7 @@ body{
 }
 #top{
     color: transparent;
-    background-color: #ff4040;
+    background-color: #a69376;
     display: flex;
     position: relative;
     justify-content: center;
@@ -37,7 +37,15 @@ body{
     color: #303031;
 }
 a#homelink:hover{
-    border-bottom:2px solid #ff4040;
+    border-bottom:2px solid #a69376;
+}
+#failed{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    color: red;
+    font-size: 10px;
+    top: -15px;
 }
 #credentials{
     display: flex;
@@ -62,7 +70,7 @@ a#homelink:hover{
 }
 
 #loginid, #password{
-    font-size: 10px;
+    font-size: 12px;
     font-weight: lighter;
     letter-spacing: 1px;
     display: flex;
@@ -75,7 +83,7 @@ a#homelink:hover{
 }
 #submit{
     cursor: pointer;
-    background: #ff4040;
+    background: #a69376;
     font-size: 16px;
     font-weight: 300;
     color: white;
@@ -85,7 +93,7 @@ a#homelink:hover{
     justify-content: center;
     width: 100%;
     top: -85px;
-    border: 2px solid #ff4040;
+    border: 2px solid #a69376;
 }
 #submit:active{
     background: #303031;

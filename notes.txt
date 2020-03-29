@@ -27,6 +27,16 @@ index:
     Determine database schema
     Create VSQL page from database schema
     VSQL page should load into another page after credentials
+        ->authentication !done!
+        ->loadVQL
+            ->pull all columns and fields without data
+            ->generate visual application
+                ->need javascript code to create sections and append
+                ->database objects section
+                ->fields objects section
+                ->live SQL section for generating reporting
+    Create additional accounts for business and analyst and temporary professor
 
+35.188.152.169
 
 

@@ -12,7 +12,8 @@ if(strlen($_SESSION["active"]) != 36){
     <head>
         <meta charset="UTF-8">
         <title>VisualSQL | Main Page</title>
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/header.css">
         <style>
             @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
         </style>
