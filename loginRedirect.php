@@ -10,9 +10,9 @@ $result = $credentials->getCredentials($formID, $formPassword, 'user_info',
 if($result != 0){
     session_start();
     $_SESSION["active"] = $result;
-    header('Location: ./index.php?' . http_build_query(array(
-            'id' => $formID,
-            'pss' => $formPassword)));
+    $_SESSION["id"] = $formID;
+    $_SESSION["password"] = $formPassword;
+    header('Location: ./index.php');
     exit();
 } else {
     header('Location: ./login.php?' . http_build_query(array(

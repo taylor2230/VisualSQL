@@ -8,7 +8,7 @@ body{
 }
 #top{
     color: transparent;
-    background-color: #a69376;
+    background-color: #4994eb;
     display: flex;
     position: relative;
     justify-content: center;
@@ -17,19 +17,36 @@ body{
     left: -7.8px;
     top: -9px;
 }
-.title{
+#credentials{
     display: flex;
     position: relative;
-    letter-spacing: 3px;
     justify-content: center;
 }
-.title a#homelink{
+form{
+    min-width: 400px;
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    margin: 15%;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 25px;
+    box-shadow: 0px 3px 10px 2px rgba(0.0,0.0,0.0,0.2);
+    border-top: 2px solid #4994eb;
+    border-radius:20px 20px 20px 20px ;
+}
+#homelink{
+    letter-spacing: 3px;
     text-decoration: none;
     color: #303031;
     font-weight: 300;
     font-size: 34px;
-    display: inline-block;
     position: relative;
+    display: flex;
+    justify-content: center;
+    margin-left: 25%;
+    width: 50%;
+    border-radius: 0 0 10px 10px;
     border-bottom: 2px solid rgba(0.0,0.0,0.0,0.2);
 }
 .title a:visited{
@@ -37,20 +54,13 @@ body{
     color: #303031;
 }
 a#homelink:hover{
-    border-bottom:2px solid #a69376;
+    border-bottom:2px solid #4994eb;
 }
-#failed{
-    display: flex;
+#failed-text{
     position: relative;
-    justify-content: center;
     color: red;
-    font-size: 10px;
-    top: -15px;
-}
-#credentials{
-    display: flex;
-    position: relative;
-    justify-content: center;
+    font-size: 12px;
+    margin: 25%;
 }
 #loginlabel{
     letter-spacing: 2px;
@@ -58,7 +68,7 @@ a#homelink:hover{
     font-weight: lighter;
     position: relative;
     left: 2px;
-    top: -15px;
+    margin: 25%;
 }
 #passwordlabel{
     letter-spacing: 2px;
@@ -66,37 +76,47 @@ a#homelink:hover{
     font-weight: lighter;
     position: relative;
     left: 2px;
-    top: -50px;
+    margin: 25%;
+    top: -10px;
 }
 
 #loginid, #password{
     font-size: 12px;
     font-weight: lighter;
     letter-spacing: 1px;
-    display: flex;
     position: relative;
-    justify-content: center;
-    top: -15px;
+    min-width: 200px;
+    width: 50%;
+    margin-left: 25%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid rgba(0.0,0.0,0.0,0.1);
 }
 #password{
-    top: -50px;
+    top: -10px;
 }
 #submit{
     cursor: pointer;
-    background: #a69376;
+    background: #4994eb;
     font-size: 16px;
     font-weight: 300;
     color: white;
     letter-spacing: 1px;
-    display: flex;
     position: relative;
+    display: flex;
     justify-content: center;
-    width: 100%;
-    top: -85px;
-    border: 2px solid #a69376;
+    width: 50%;
+    top: -10px;
+    margin-left: 25%;
+    border: 2px solid #4994eb;
+    box-sizing: border-box;
+    border-radius:0 0 10px 10px;
 }
 #submit:active{
-    background: #303031;
-    border: 2px solid #303031;
+    background: #005dc9;
+    border: 2px solid #005dc9;
     color: #ffffff;
+}
+#loginid:focus,#password:focus{
+    border-bottom: 1px solid #005dc9;
 }

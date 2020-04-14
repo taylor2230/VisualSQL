@@ -13,7 +13,7 @@ body{
     top: -8px;
     width: 101.75%;
     height: 40px;
-    border-top: 4px solid #a69376;
+    border-top: 4px solid #4994eb;
     border-bottom: 1px solid rgba(0.0,0.0,0.0,0.1);
 }
 .toplinks{
@@ -31,7 +31,7 @@ body{
     border-right: 1px solid rgba(0.0,0.0,0.0,0.1);
 }
 #homelink:hover{
-    border-right: 1px solid #a69376;
+    border-right: 1px solid #4994eb;
 }
 .toplinks-sub{
     position: absolute;

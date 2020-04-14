@@ -31,10 +31,14 @@ index:
         ->loadVQL
             ->pull all columns and fields without data
             ->generate visual application
-                ->need javascript code to create sections and append
-                ->database objects section
+                ->need javascript code to create sections and append !done!
+                ->database objects section !done!
+                    ->database objects CSS !done!
                 ->fields objects section
-                ->live SQL section for generating reporting
+                    ->fields objects CSS
+                    -> javascript to append fields section
+                ->databases selection loads table section
+                    ->accessData handles post login
     Create additional accounts for business and analyst and temporary professor
 
 35.188.152.169

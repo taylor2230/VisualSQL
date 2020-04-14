@@ -11,10 +11,12 @@ if(strlen($_SESSION["active"]) != 36){
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>VisualSQL | Main Page</title>
+        <title>VisualSQL | VSQL</title>
         <link rel="stylesheet" type="text/css" href="./css/index%23report.css">
         <link rel="stylesheet" type="text/css" href="./css/header.css">
+        <link rel="stylesheet" type="text/css" href="./css/vsql.css">
         <script type="text/javascript" src="./javascriptCode/__vsqlClient.js"></script>
+        <script type="text/javascript" src="./javascriptCode/__vsqlApplication.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <style>
             @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
@@ -36,6 +38,8 @@ if(strlen($_SESSION["active"]) != 36){
             <label id="cred-label">VSQL Login:</label>
             <input id="log" type="text" placeholder="Login..." name="login" autocomplete="off">
             <input id="pass" type="password" placeholder="Password..." name="password" autocomplete="off">
+            <button id="submit" onclick="passInfo()">Access</button>
+            <div id="failure"></div>
         </div>
         <div id="vsql">
 
@@ -46,15 +50,13 @@ if(strlen($_SESSION["active"]) != 36){
     <script>
         $("#pass").keyup(function(event) {
             if (event.keyCode === 13) {
-                usr = document.getElementById("log").value;
-                ps = document.getElementById("pass").value
-                sendInfo(usr, ps);
+                passInfo();
             }
         });
+
     </script>
     </html>
     <?php
-
 }
 
 

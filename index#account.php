@@ -11,7 +11,7 @@ if(strlen($_SESSION["active"]) != 36){
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>VisualSQL | Main Page</title>
+        <title>VisualSQL | Account</title>
         <link rel="stylesheet" type="text/css" href="./css/index%23account.css">
         <link rel="stylesheet" type="text/css" href="css/header.css">
         <style>

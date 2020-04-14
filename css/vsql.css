@@ -1,0 +1,198 @@
+#vsql{
+    position: relative;
+    height: 100%;
+    width: 101.1%;
+    left: -6.8px;
+}
+#query-builder{
+    position: relative;
+    top: 4px;
+    min-width: 200px;
+    width: 100%;
+    font-size: 14px;
+    color: #005dc9;
+    border-right: 1px solid rgba(0.0,0.0,0.0,0.1);
+    border-top: 1px solid rgba(0.0,0.0,0.0,0.1);
+    border-bottom: 1px solid rgba(0.0,0.0,0.0,0.1);
+    word-break: break-word;
+}
+#query-submit{
+    background-color: #ffffff;
+    color: #4994eb;
+    position: relative;
+    top: 1px;
+    width: 100%;
+    height: 19px;
+    border: 1px solid rgba(0.0,0.0,0.0,0.1);
+}
+#query-header{
+    color: #4994eb;
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0.0,0.0,0.0,0.1);
+}
+#query-builder > p{
+    position: relative;
+    left: 4px;
+}
+#slc-db{
+    position: relative;
+    top: -8px;
+}
+#slc-fields{
+    position: relative;
+    top: -18px;
+}
+#query-builder:hover{
+    box-shadow: 0px 3px 10px 2px rgba(0.0,0.0,0.0,0.2);
+}
+#query-submit:hover{
+    color: #005dc9;
+    border: 1px solid rgba(0.0,0.0,0.0,0.2);
+}
+#query-submit:active{
+    color: white;
+    background-color: #005dc9;
+    border: 1px solid #005dc9;
+}
+#db-group{
+    position: relative;
+    top: 6px;
+    height: 120px;
+    min-width: 200px;
+    width: 11%;
+    border-right: 1px solid rgba(0.0,0.0,0.0,0.1);
+    border-top: 1px solid rgba(0.0,0.0,0.0,0.1);
+    border-bottom: 1px solid rgba(0.0,0.0,0.0,0.1);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    word-break: break-word;
+}
+.db{
+    list-style: none;
+    position: relative;
+    min-width: 147px;
+    width: 100%;
+    font-size: 13px;
+    padding-top: 2px;
+    padding-left: 3px;
+}
+.db > a{
+    color: rgba(0.0,0.0,0.0,0.5);
+    text-decoration: none;
+    position: relative;
+    padding-top: 4px;
+}
+#db-header{
+    color: rgba(0.0,0.0,0.0,0.5);
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0.0,0.0,0.0,0.1);
+}
+#db-group:hover{
+    box-shadow: 0px 3px 10px 2px rgba(0.0,0.0,0.0,0.2);
+}
+.db:hover{
+    box-shadow: 0px 3px 10px 2px rgba(0.0,0.0,0.0,0.2);
+}
+.db > a:hover{
+    color: #4994eb;
+}
+#table{
+    visibility: hidden;
+    position: relative;
+    top: 8px;
+    min-width: 200px;
+    width: 11%;
+    height: 300px;
+    border-right: 1px solid rgba(0.0,0.0,0.0,0.1);
+    border-top: 1px solid rgba(0.0,0.0,0.0,0.1);
+    border-bottom: 1px solid rgba(0.0,0.0,0.0,0.1);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    word-break: break-word;
+}
+.table-list{
+    list-style: none;
+    position: relative;
+    min-width: 147px;
+    width: 100%;
+    font-size: 13px;
+    padding-top: 2px;
+    padding-left: 3px;
+    word-break: break-word
+}
+#table-header{
+    color: rgba(0.0,0.0,0.0,0.5);
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0.0,0.0,0.0,0.1);
+}
+.table-list > a{
+    color: rgba(0.0,0.0,0.0,0.5);
+    text-decoration: none;
+}
+#table:hover{
+    box-shadow: 0px 3px 10px 2px rgba(0.0,0.0,0.0,0.2);
+}
+.table-list:hover{
+    box-shadow: 0px 3px 10px 2px rgba(0.0,0.0,0.0,0.2);
+}
+.table-list > a:hover{
+    color: #4994eb;
+}
+#fields{
+    visibility: hidden;
+    position: relative;
+    top: 11px;
+    min-width: 200px;
+    width: 11%;
+    height: 300px;
+    border-right: 1px solid rgba(0.0,0.0,0.0,0.1);
+    border-top: 1px solid rgba(0.0,0.0,0.0,0.1);
+    border-bottom: 1px solid rgba(0.0,0.0,0.0,0.1);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    word-break: break-word;
+}
+.field-list{
+    list-style: none;
+    position: relative;
+    min-width: 147px;
+    width: 100%;
+    font-size: 13px;
+    padding-top: 2px;
+    padding-left: 3px;
+    word-break: break-word
+}
+#fields-header{
+    color: rgba(0.0,0.0,0.0,0.5);
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0.0,0.0,0.0,0.1);
+}
+.field-list > a{
+    color: rgba(0.0,0.0,0.0,0.5);
+    text-decoration: none;
+}
+#fields:hover{
+    box-shadow: 0px 3px 10px 2px rgba(0.0,0.0,0.0,0.2);
+}
+.field-list:hover{
+    box-shadow: 0px 3px 10px 2px rgba(0.0,0.0,0.0,0.2);
+}
+.field-list > a:hover{
+    color: #4994eb;
+}

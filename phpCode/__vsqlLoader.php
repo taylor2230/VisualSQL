@@ -13,27 +13,40 @@ $process->loadVSQL($verified, $headerID, $headerPass);
 class __vsqlLoader
 {
     public function loadVSQL($bool, $log, $pass){
-        $mysqli = new mysqli('localhost',$log,$pass);
         function failed(){
             echo '<h3 id="failed">Credentials not found; please contact admin</h3>';
         }
 
+        try{
+            $mysqli = new mysqli('localhost',$log,$pass);
+        } catch(Exception $e){
+            failed();
+        }
         function createApplication($array, $id){
-            function buildForms(){
-
+            function buildArea(){
+                echo '<div class="table" id="table"></div>';
+                echo '<div class="fields" id="fields"></div>';
+                echo '<div class="report" id="report"></div>';
             }
             function buildList($obj, $class){
+                echo '<div id="query-builder"><label id="query-header">PowerQuery</label></div>';
+                echo '<div id="db-group"><li id="db-header">Available Databases</li>';
                 for($i = 0; $i < count($obj);$i++){
-                    echo '<li class="' . $class . '"">' . $obj[$i] . '</li>';
+                    echo '<li class="' . $class . '"><a href="#" target="_self" onclick="processDatabaseSelection(this.innerText);nextElementUnHide(this);">' . $obj[$i] . '</a></li>';
+                }
+                echo '</div>';
+            }
+            function sendDatabases($arr, $mod){
+                $upperPriv = array('phpmyadmin', 'mysql','performance_schema','user_info');
+                $limitedResults = array_values(array_diff($arr, $upperPriv));
+                if($mod === 'admin' or $mod === 'root' or $mod === 'prof'){
+                    buildList($arr, 'db');
+                } else {
+                    buildList($limitedResults, 'db');
                 }
             }
-            $upperPriv = array('phpmyadmin', 'mysql','performance_schema','user_info');
-            $limitedResults = array_values(array_diff($array, $upperPriv));
-            if($id === 'admin' or $id === 'root'){
-                buildList($array, 'db');
-            } else {
-                buildList($limitedResults, 'db');
-            }
+            sendDatabases($array, $id);
+            buildArea();
 
         }
 
@@ -44,8 +57,6 @@ class __vsqlLoader
                 array_push($databases, $row['schema_name']);
             }
             createApplication($databases, $log);
-        } else {
-            failed();
         }
     }
 }
