@@ -39,7 +39,7 @@ class __vsqlLoader
             function sendDatabases($arr, $mod){
                 $upperPriv = array('phpmyadmin', 'mysql','performance_schema','user_info');
                 $limitedResults = array_values(array_diff($arr, $upperPriv));
-                if($mod === 'admin' or $mod === 'root' or $mod === 'prof'){
+                if($mod === 'admin' or $mod === 'root' or $mod === 'professor'){
                     buildList($arr, 'db');
                 } else {
                     buildList($limitedResults, 'db');

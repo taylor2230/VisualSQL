@@ -1,4 +1,6 @@
 <?php
+include './powerQuery.php';
+
 $header = explode(" ", $_REQUEST["val"]);
 $dbName = $header[0];
 $usrID = $header[1];
@@ -11,7 +13,14 @@ $initializeRequest = new motherload($dbName,$usrID,$usrPass,$requestType,$reques
 return $initializeRequest->getFunction();
 class motherload
 {
-    function __construct($requestedDB ,$user ,$userPass ,$requestedFunction ,$requestedTable, $requestedFields)
+    private $requestedDB;
+    private $user;
+    private $userPass;
+    private $requestedFunction;
+    private $requestedTable;
+    private $requestedFields;
+
+    function __construct($requestedDB , $user , $userPass , $requestedFunction , $requestedTable, $requestedFields)
     {
         $this->requestedDB = $requestedDB;
         $this->user = $user;
@@ -29,7 +38,9 @@ class motherload
             $b = new accessDBTablesFields($this->requestedDB,  $this->user, $this->userPass, $this->requestedTable);
             $b->buildFields();
         } elseif ($this->requestedFunction === 'data'){
-            echo $this->requestedFields;
+            $combinedTarget = $this->requestedDB.'.'.$this->requestedTable;
+            $c = new returnTableFieldData($this->requestedDB, $this->user, $this->userPass, $combinedTarget, $this->requestedFields);
+            $c->buildData();
         }
         return null;
     }
@@ -37,7 +48,11 @@ class motherload
 class accessDBTables
 {
     //return database's tables
-     function __construct($requestedDB ,$user , $userPass)
+    private $requestedDB;
+    private $user;
+    private $userPass;
+
+    function __construct($requestedDB , $user , $userPass)
      {
         $this->requestedDB = $requestedDB;
         $this->user = $user;
@@ -51,7 +66,6 @@ class accessDBTables
      }
      function buildTables()
      {
-
          $tables = $this->returnTables();
          echo '<li id="table-header">Available Tables</li>';
          for($i = 0; $i < count($tables); $i++)
@@ -64,7 +78,12 @@ class accessDBTables
 class accessDBTablesFields
 {
     //return table's fields
-    function __construct($requestedDB ,$user , $userPass, $requestedTable)
+    private $requestedDB;
+    private $user;
+    private $userPass;
+    private $requestTable;
+
+    function __construct($requestedDB , $user , $userPass, $requestedTable)
     {
         $this->requestedDB = $requestedDB;
         $this->user = $user;
@@ -90,40 +109,48 @@ class accessDBTablesFields
 class returnTableFieldData
 {
     //return fields' data
-    function __construct($requestedDB ,$user , $userPass, $requestedTable, $requestedFields)
+    private $requestedFields;
+    private $requestTable;
+    private $userPass;
+    private $user;
+    private $requestedDB;
+
+    function __construct($requestedDB , $user , $userPass, $requestedTable, $requestedFields)
     {
         $this->requestedDB = $requestedDB;
         $this->user = $user;
         $this->userPass = $userPass;
         $this->requestTable = $requestedTable;
         $this->requestedFields = $requestedFields;
+        
     }
     function returnData()
     {
 
+        $query = "select $this->requestedFields from $this->requestTable";
+        $powerQuery = new powerQuery($this->user,$this->userPass,$query);
+        return $powerQuery->pQ();
+
     }
     function buildData()
     {
-
-    }
-}
-class powerQuery
-{
-    //handles all query operations
-    function __construct($user, $userPass, $query)
-    {
-        $this->user = $user;
-        $this->userPass = $userPass;
-        $this->query = $query;
-        $this->msqli = new mysqli('localhost', $this->user, $this->userPass);
-    }
-    function pQ()
-    {
-        return $powerQuery = $this->msqli->query($this->query)->fetch_all();
-
-    }
-    function pQFields()
-    {
-        return $powerQuery = $this->msqli->query($this->query)->fetch_fields();
+        $columns = explode(",",$this->requestedFields);
+        $data = $this->returnData();
+        //$data[row][column];
+        //$columns[column header];
+        echo "<table class='tbl'>";
+        echo "<tr class='column'>";
+        for($i = 0;$i < count($columns);$i++){
+            echo '<th id="report-header">'.$columns[$i].'</th>';
+        }
+        echo "</tr>";
+        for($z = 0;$z < count($data);$z++){
+            echo '<tr class="column">';
+            for($x = 0;$x < count($data[$z]);$x++){
+                echo '<td>'.$data[$z][$x].'</td>';
+            }
+            echo '</tr>';
+        }
+        echo "</table>";
     }
 }

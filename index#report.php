@@ -32,6 +32,9 @@ if(strlen($_SESSION["active"]) != 36){
         <a  id="opt3" href="./index%23admin.php">ADMIN</a>
         <a  id="opt4" href="./index%23account.php">ACCOUNT</a>
         <a  id="opt5" href="./logout.php">LOGOUT</a>
+        <?php
+            echo '<a id="opt6" href="#">USER: <a id="current-user">'.$_SESSION["id"].'</a></a>'
+        ?>
     </section>
     <section class="content" id="content">
         <div id="vsql-login">

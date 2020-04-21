@@ -11,7 +11,8 @@ body{
     position: relative;
     left: -7.8px;
     top: -8px;
-    width: 101.75%;
+    width: 100%;
+    min-width: 700px ;
     height: 40px;
     border-top: 4px solid #4994eb;
     border-bottom: 1px solid rgba(0.0,0.0,0.0,0.1);
@@ -37,6 +38,7 @@ body{
     position: absolute;
     left: 140px;
     top: 13px;
+    min-width: 700px;
 }
 .toplinks-sub > a{
     text-decoration: none;
@@ -64,4 +66,15 @@ body{
 #opt5{
     position: relative;
     left: 88px;
+}
+#opt6{
+    padding-left:10px;
+    position: relative;
+    left: 100px;
+    border-left: 1px solid rgba(0.0,0.0,0.0,0.1);
+}
+#current-user{
+    text-transform: uppercase;
+    position: relative;
+    left: 100px;
 }

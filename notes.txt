@@ -24,21 +24,8 @@ index:
 
 
 ### Next Steps:
-    Determine database schema
-    Create VSQL page from database schema
-    VSQL page should load into another page after credentials
-        ->authentication !done!
-        ->loadVQL
-            ->pull all columns and fields without data
-            ->generate visual application
-                ->need javascript code to create sections and append !done!
-                ->database objects section !done!
-                    ->database objects CSS !done!
-                ->fields objects section
-                    ->fields objects CSS
-                    -> javascript to append fields section
-                ->databases selection loads table section
-                    ->accessData handles post login
+    account deletion
+    account creation
     Create additional accounts for business and analyst and temporary professor
 
 35.188.152.169

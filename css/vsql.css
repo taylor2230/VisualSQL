@@ -1,7 +1,7 @@
 #vsql{
     position: relative;
     height: 100%;
-    width: 101.1%;
+    width: 100%;
     left: -6.8px;
 }
 #query-builder{
@@ -195,4 +195,27 @@
 }
 .field-list > a:hover{
     color: #4994eb;
+}
+.tbl{
+    display: flex;
+    position: relative;
+    width: 84%;
+    left: 205px;
+    top: -720px;
+    border-collapse: collapse;
+    word-break: normal;
+}
+#report-header{
+    text-align: left;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right:10px;
+    border: 1px solid rgba(0.0,0.0,0.0,0.3);
+}
+.column > td{
+    border: 1px solid rgba(0.0,0.0,0.0,0.3);
+    text-align: left;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right:10px;
 }
